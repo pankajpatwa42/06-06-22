@@ -7,6 +7,7 @@ public class Q37Magicsquare {
 	
 	public static void isSquareMagic(int mat[][],int size)
 	{
+		boolean flag= false;
 		int sumd1 = 0,sumd2 = 0;
 		int rowsum =0, colsum =0 ;
 		for(int i = 0;i<size;i++)
@@ -27,19 +28,17 @@ public class Q37Magicsquare {
 			}
 			
 		}
-//		System.out.println(sumd1 +" "+sumd2+" "+rowsum+" "+colsum);
+		System.out.println(sumd1 +" "+sumd2+" "+rowsum+" "+colsum);
 		System.out.println();
 		if((sumd1==sumd2))
-		{
-			if(rowsum == colsum && colsum==sumd1)
+			flag = true;
+		if(rowsum == colsum && flag ==true)
 				System.out.println("Magic Square");
-			else
-				System.out.println("Not a Magic Square");
-			
-		}else
-			System.out.println("Not a Magic Square");	
-		
-	}
+		else
+			System.out.println("Not a Magic Square");
+				
+	}	
+	
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
