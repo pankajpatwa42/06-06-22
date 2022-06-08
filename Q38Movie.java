@@ -33,11 +33,20 @@ public class Q38Movie {
 	
 	public static void main(String args[])
 	{
-		
+		Q38Movie mov = new Q38Movie("Casino Royale", "Eon Production","PG-13");
+		Q38Movie [] m1 = new Q38Movie[2];
+		m1[0] = new Q38Movie("xyz","abc","PG");
+		m1[1] = new Q38Movie("xyz1","abc1","PG");
+		Q38Movie [] mov1 = mov.getPg(m1);
+		for(Q38Movie i : mov1)
+		{
+			if(i==null)
+				break;
+			System.out.println(i.title);
 		}
 
 		
-		
+	}	
 	}		
 
 
